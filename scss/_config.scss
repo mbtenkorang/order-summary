@@ -1,0 +1,24 @@
+//Resets
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+//Color Variables
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$very-paleblue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$white: #fff;
+//font
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+$redhat-font:  'Red Hat Display', sans-serif;
+
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}

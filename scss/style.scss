@@ -1,0 +1,121 @@
+@import 'config';
+
+
+
+body {
+    background-color: $pale-blue;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1, h2, p, a{
+    font-family: $redhat-font;
+}
+
+
+/*Main and General Design
+---------------*/
+main.card{
+    width: 20rem;
+    height: 33.5rem;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: 0px 1px 3px $desaturated-blue;
+
+    img.hero {
+        display: block;
+        width: 100%;
+        border: 2px solid $bright-blue;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+}
+
+/*Design for content div*/
+.content {
+    margin: 0 20px 20px 20px;
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        word-spacing: 1px;
+        margin: 20px 0;
+        line-height: 1.5;
+    }
+
+    h1{
+        color: $dark-blue;
+        font-weight: 900;
+        margin: 10px 0;
+    }
+
+    h2.plan{
+        color: $dark-blue;
+        font-size: 16px;
+        font-weight: 900;
+    }
+    p{
+        color: $desaturated-blue;
+    }
+
+    .subcription {
+        @include flex-align;
+        justify-content: space-between;
+        background-color: $very-paleblue;
+        border-radius: 10px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+
+        .price{
+            @include flex-align;
+        }
+
+        img {
+            margin: 0 15px;
+            border:  1px solid $desaturated-blue;
+            border-radius: 50%;
+        }
+
+        a {
+            color: $bright-blue;
+            font-weight: 700;
+            margin-right: 10px;
+
+            &:hover {
+                color: lighten($bright-blue, 10);
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+/*Button Design*/
+@import '_button.scss';
+
+/*Footer
+---------*/
+.attribution {
+    display: flex;
+    font-size: 11px;
+    text-align: center;
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
+
+/* Media Queries*/
+@media screen and (min-width: 550px) {
+    main.card{
+        width: 24rem;
+        height: 35rem;
+    }
+
+    .content {
+        margin: 0px 30px 30px 30px;
+    }
+
+}

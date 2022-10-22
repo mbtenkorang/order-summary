@@ -1,0 +1,40 @@
+.button {
+    @include flex-align;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+}
+
+a.btn{
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 12px;
+
+    &.btn-primary{
+        color: $white;
+        background-color: $bright-blue;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(0.99);
+            background-color: lighten($bright-blue, 10);
+            box-shadow: 0 1px 10px lighten($bright-blue, 10);
+        }
+    }
+
+    &.btn-secondary{
+        margin-top: 10px;
+        color: $desaturated-blue;
+
+        &:hover {
+            cursor: pointer;
+            color: #000;
+        }
+    }
+}
+
